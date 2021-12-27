@@ -9,15 +9,15 @@ exports.execute = async (client, message, args) => {
   }
   
   let embed = new MessageEmbed()
-  .setTitle("Store")
+  .setTitle("loja")
   .setDescription(content)
   .setColor("BLURPLE")
-  .setFooter(" :?buy <item> to purchase the item.")
+  .setFooter("use :!comprar <item> para comprar o item.")
   return message.channel.send(embed);
 };
 
 exports.help = {
-  name: "shop",
+  name: "loja",
   aliases: [],
-  usage: `shop`
+  usage: `loja`
 };

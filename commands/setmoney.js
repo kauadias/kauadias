@@ -9,8 +9,8 @@ exports.execute = async (client, message, args) => {
     let data = client.eco.setMoney(user.id, parseInt(amount));
     const embed = new MessageEmbed()
         .setTitle(`Money Updated!`)
-        .addField(`User`, `<@${data.user}>`)
-        .addField(`Total Amount`, data.after)
+        .addField(`Usuario`, `<@${data.user}>`)
+        .addField(`Total `, data.after)
         .setColor("RANDOM")
         .setThumbnail(user.displayAvatarURL)
         .setTimestamp();
@@ -18,7 +18,7 @@ exports.execute = async (client, message, args) => {
 }
 
 exports.help = {
-    name: "setmoney",
-    aliases: ["setbal"],
-    usage: `setmoney @user <amount>`
+    name: "definirdinheiro",
+    aliases: ["definirbolsa"],
+    usage: `definirdinheiro @usuario <quantidade>`
 }
