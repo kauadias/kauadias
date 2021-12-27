@@ -18,7 +18,7 @@ const result = Object.keys(arrayToObject).map(k => embed.addField(`Name: ${k}`,`
   return message.channel.send(embed);
 }
 exports.help = {
-  name: "inventory",
+  name: "inventario",
   aliases: ["inv"],
   usage: `inv`
 }
