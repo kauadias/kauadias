@@ -6,9 +6,9 @@ exports.execute = async (client, message, args) => {
   let item = args[0];
   if (!item) return message.channel.send("What are you trying to buy?");
   let hasItem = client.shop[item];
-  if (!hasItem || hasItem == undefined) return message.reply("That item doesnt exists lol");
+  if (!hasItem || hasItem == undefined) return message.reply("esse item não existe burrinho-kun");
   let isBalanceEnough = (userBalance.amount >= hasItem.cost);
-  if (!isBalanceEnough) return message.reply("Your balance is insufficient. You need :dollar: "+hasItem.cost+" to buy this item.");
+  if (!isBalanceEnough) return message.reply("sua balança é insuficiente. Você precisa :dollar: "+hasItem.cost+" para comprar esse item.");
   let buy = client.eco.removeMoney(message.author.id, hasItem.cost);
   
   let itemStruct = {
@@ -17,11 +17,11 @@ exports.execute = async (client, message, args) => {
   };
   
   client.db.push(`items_${message.author.id}`, itemStruct);
-  return message.channel.send(`You purchased **${item}** for **:dollar: ${hasItem.cost}**.`);
+  return message.channel.send(`Você comprou **${item}** por **:dollar: ${hasItem.cost}**.`);
 };
 
 exports.help = {
-  name: "buy",
+  name: "comprar",
   aliases: [],
-  usage: `buy <item>`
+  usage: `comprar <item>`
 };
