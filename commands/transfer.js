@@ -9,7 +9,7 @@ exports.execute = async (client, message, args) => {
   return message.channel.send(`You have successfully transferred 💸**${amount}** to ** ${member.user.tag}**.`)
 }
 exports.help = {
-  name: "transfer",
+  name: "transferir",
   aliases: ['give', 'share'],
-  usage: `transfer <member> <amount>`
+  usage: `transferir <member> <amount>`
 };

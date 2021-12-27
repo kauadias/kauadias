@@ -1,12 +1,12 @@
 exports.execute = async (client, message, args) => {
     let amount = Math.floor(Math.random() * 1000) + 500;
     let addMoney = client.eco.weekly(client.ecoAddUser, amount);
-    if (addMoney.onCooldown) return message.reply(`You have already claimed your weekly credit. Come back after ${addMoney.time.days} days, ${addMoney.time.hours} hours, ${addMoney.time.minutes} minutes & ${addMoney.time.seconds} seconds to claim it again.`);
-    else return message.reply(`You have claimed **${addMoney.amount}** 💸 as your weekly credit & now you have **${addMoney.after}** 💸. But you will lose your balance if you do not subscribe to ZeroSync on yt :P`);
+    if (addMoney.onCooldown) return message.reply(`Você ja renvidicou seu semanal. volte depois de ${addMoney.time.days} dias, ${addMoney.time.hours} horas, ${addMoney.time.minutes} minutos & ${addMoney.time.seconds} segundos para reinvidicar novamente.`);
+    else return message.reply(`Você reinvidicou **${addMoney.amount}** 💸 como seu crédito semanal & e agora você tem **${addMoney.after}** 💸. cuide bem do seu dinheiro`);
 };
 
 exports.help = {
-    name: "weekly",
+    name: "semanal",
     aliases: [],
-    usage: "weekly"
+    usage: "semanal"
 }
