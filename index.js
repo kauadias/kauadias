@@ -13,7 +13,7 @@ client.shop = {
   "semente tomate" : {
     cost: 20
   },
-  "semente feijão" : {
+  "PC" : {
     cost: 30
   }
 };
