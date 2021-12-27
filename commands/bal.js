@@ -4,10 +4,10 @@ exports.execute = async (client, message, args) => {
     let user = message.mentions.users.first() || message.author;
     let userBalance = client.eco.fetchMoney(user.id);
     const embed = new MessageEmbed()
-        .setTitle(`Balance`)
-        .addField(`User`, `<@${userBalance.user}>`)
-        .addField(`Balance`, `${userBalance.amount} 💸`)
-        .addField(`Position`, userBalance.position)
+        .setTitle(`Balança`)
+        .addField(`Usuario`, `<@${userBalance.user}>`)
+        .addField(`Balança`, `${userBalance.amount} 💸`)
+        .addField(`Posição`, userBalance.position)
         .setColor("RANDOM")
         .setThumbnail(user.displayAvatarURL)
         .setTimestamp();
@@ -15,7 +15,7 @@ exports.execute = async (client, message, args) => {
 }
 
 exports.help = {
-    name: "bal",
-    aliases: ["money", "credits", "balance"],
-    usage: `bal`
+    name: "bolsa",
+    aliases: ["dinheiro", "credito", "balança"],
+    usage: `bolsa`
 }
